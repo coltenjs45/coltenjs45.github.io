@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Colten Stevens</title>
+  <meta name="description" content="Projects by Colten Stevens.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="mark" href="index.html">Colten Stevens</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="resume.pdf">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="wrap page-head">
+      <h1>Projects</h1>
+      <p class="lede">Four projects, starting with senior design. Each one covers what it is, my role, what I learned, and what I used to build it.</p>
+    </section>
+
+    <section class="wrap projects">
+      <article class="project" id="senior-design">
+        <header>
+          <h2>Senior design: AI Arcade</h2>
+          <p class="meta">Iowa State senior design, 2026–2027, for client Josh Clausman of Silvertree Studios. <span class="todo">Add your team number, e.g. sdmay27-XX.</span></p>
+        </header>
+        <dl class="facts">
+          <div class="row">
+            <dt>Description</dt>
+            <dd>A retro arcade that ships a small library of classic-style games, like Pong, Breakout, and Frogger, along with an AI agent that can modify those games or write entirely new ones. The games are written in Rust on the macroquad framework and run in the browser through WebAssembly, and are being brought to a physical arcade cabinet built around a Raspberry Pi 5. A separate authoring tool lets a person describe a change, has the AI agent make it, and shows a live preview before anything is accepted.</dd>
+          </div>
+          <div class="row">
+            <dt>My role</dt>
+            <dd>I have two jobs on the team. On the hardware side, I'm building the physical arcade: setting up the Raspberry Pi 5 and fitting it into the cabinet with its screen and controls. On the AI side, I develop the skills in the harness that the AI agent works from when it edits games live. These are written instructions that keep the agent efficient and make it harder to attack through prompt injection, where text hidden in a request or a file tries to hijack the agent into doing something it shouldn't.</dd>
+          </div>
+          <div class="row">
+            <dt>Skills gained</dt>
+            <dd>Setting up and configuring a Raspberry Pi 5 on Linux and integrating it with arcade hardware. Writing instructions that steer an AI agent toward fast, correct changes. Thinking like an attacker about AI systems: how prompt injection works, where untrusted input enters, and how to limit what a hijacked agent could do. Working with an outside client and a team split across hardware, software, and AI.</dd>
+          </div>
+          <div class="row">
+            <dt>Big picture</dt>
+            <dd>AI Arcade turns players into co-authors: someone with no programming background can describe the game they want and play it minutes later. It is also a small, concrete test of a bigger question in security: how to let an AI write and ship code safely. The arcade that players use and the AI that writes code run on separate systems, every game is held to a fixed input contract, and AI-written changes are previewed and reviewed before they reach the arcade.</dd>
+          </div>
+        </dl>
+        <ul class="docs">
+          <li><a href="https://ai-arcade.silvertreestudios.workers.dev/">Play it in your browser</a></li>
+          <li><a href="https://github.com/coltenjs45/SeniorDesign/blob/main/docs/DESIGN.md">Design document</a></li>
+          <li><a href="https://github.com/coltenjs45/SeniorDesign">Code on GitHub</a></li>
+          <li><span class="todo">Link: team website</span></li>
+        </ul>
+      </article>
+
+      <article class="project" id="card-games">
+        <header>
+          <h2>Multiplayer card games app</h2>
+          <p class="meta">COM S 3090 App Development team project, 2023, built with Java, Android, Spring Boot, and MySQL</p>
+        </header>
+        <dl class="facts">
+          <div class="row">
+            <dt>Description</dt>
+            <dd>An Android app, built from scratch, where players join a shared server and play several different card games against each other. The project was split between a frontend team building the Android client and a backend team building the game server.</dd>
+          </div>
+          <div class="row">
+            <dt>My role</dt>
+            <dd>Developer on the <span class="todo">frontend / backend</span> team. Midway through the semester the two halves of the project felt disconnected, so another teammate and I set up a recurring weekly meeting to review what was due that week and share progress across both teams. That gave everyone clear, manageable weekly goals, and the project went on to win best project of the semester.</dd>
+          </div>
+          <div class="row">
+            <dt>Skills gained</dt>
+            <dd>Git branching and merging on a shared repository; socket connections for real-time play between client and server; the Spring Boot framework with a MySQL database and Maven builds; and coordinating two sub-teams toward one product.</dd>
+          </div>
+          <div class="row">
+            <dt>Resources used</dt>
+            <dd>None of Git, sockets, or Spring Boot were taught directly in class, so we learned them from official documentation, example code we found online, and teaching each other. <span class="todo">Name any specific docs, tutorials, or tools, e.g. Android Studio, Postman.</span></dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="project" id="mine-sweeper">
+        <header>
+          <h2>Mine Sweeper: CyBot field robot</h2>
+          <p class="meta">CprE 2880 embedded systems final project, built in C on a TI TM4C123 microcontroller with a Python control GUI</p>
+        </header>
+        <dl class="facts">
+          <div class="row">
+            <dt>Description</dt>
+            <dd>Clearing a minefield by hand is dangerous, especially in dense terrain. Our team of four built Mine Sweeper, a robot that sweeps a test field imitating a sectioned-off minefield in a forest. A driver steers the CyBot (an iRobot Create base with a TM4C123 microcontroller) from a Python GUI over a Wi-Fi socket. The robot scans with infrared and ultrasonic sensors on a servo, detects holes and field boundaries with its cliff sensors, reports bumps, and tracks its own position so the GUI can draw a live map of the field and every object it finds.</dd>
+          </div>
+          <div class="row">
+            <dt>My role</dt>
+            <dd>I led the team's development and wrote most of the robot's embedded C code, everything outside the Python GUI. My main job was getting the CyBot to read its surroundings with every sensor on board: I set up the servo-mounted infrared and ultrasonic (ping) scanning, calibrated the IR sensor against measured distances so its readings converted to real distances, and wired up the bump and cliff sensors so the robot reported collisions, holes, and field boundaries to the driver as they happened.</dd>
+          </div>
+          <div class="row">
+            <dt>Skills gained</dt>
+            <dd>Embedded C on a real microcontroller: timers, interrupts, UART, ADC, and PWM servo control. Calibrating a noisy IR sensor against measured distances. Socket communication between the robot and a pygame GUI. Dead-reckoning position tracking with vectors. Splitting one system between four people and integrating it for a live demo.</dd>
+          </div>
+          <div class="row">
+            <dt>Resources used</dt>
+            <dd>TI TM4C123 datasheet and TivaWare driver library, the course's CyBot and Open Interface libraries, Code Composer Studio, Python with pygame, and our own IR calibration data. <span class="todo">Add anything else you used.</span></dd>
+          </div>
+        </dl>
+        <ul class="docs">
+          <li><a href="https://github.com/coltenjs45/cpre281-roomba-project">Code on GitHub</a></li>
+          <li><a href="assets/mine-sweeper-presentation.pdf">Project presentation (PDF)</a></li>
+          <li><a href="assets/mine-sweeper-diagram.png">Technical diagram</a></li>
+        </ul>
+      </article>
+
+      <article class="project" id="pipelined-processor">
+        <header>
+          <h2>Pipelined RISC-V processor</h2>
+          <p class="meta">CprE 3810 computer organization semester project, written in structural VHDL</p>
+        </header>
+        <dl class="facts">
+          <div class="row">
+            <dt>Description</dt>
+            <dd>Over the semester, my partner and I built three processors that run the same RISC-V instruction set: a single-cycle design, a five-stage pipeline where hazards are avoided in software by inserting NOPs, and a five-stage pipeline that detects and resolves hazards in hardware with forwarding and stalls. We benchmarked all three on four test programs, including a recursive merge sort, and compared their cycle counts and maximum clock speeds after synthesis. The hardware-scheduled pipeline was the fastest of the three on merge sort.</dd>
+          </div>
+          <div class="row">
+            <dt>My role</dt>
+            <dd>Two-person team with Graeme Anderson. I led design and testing for the software-scheduled datapath and its synthesis, the pipeline register updates, control hazard avoidance, and testing of the hardware-scheduled pipeline. <span class="todo">Check this matches what you actually did; it's from your team contract's role table.</span></dd>
+          </div>
+          <div class="row">
+            <dt>Skills gained</dt>
+            <dd>Structural VHDL; datapath and control design; pipeline registers with stall and flush; data hazard forwarding and load-use stalls; resolving branches early in the decode stage so no stages need flushing; writing RISC-V assembly test programs; reading waveforms in QuestaSim; and finding the critical path from synthesis results.</dd>
+          </div>
+          <div class="row">
+            <dt>Resources used</dt>
+            <dd>The course textbook and RISC-V specification, the CprE 3810 toolflow and test suite, QuestaSim for simulation, synthesis reports for timing, draw.io for schematics, and Git for version control.</dd>
+          </div>
+        </dl>
+        <ul class="docs">
+          <li><a href="https://github.com/coltenjs45/Cpre381-pipleined">Code on GitHub</a></li>
+          <li><a href="assets/riscv-processor-report.pdf">Final project report (PDF)</a></li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Colten Stevens, Cyber Security Engineering, Iowa State University</p>
+      <p><a href="mailto:coltenjs45@gmail.com">coltenjs45@gmail.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
