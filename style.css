@@ -179,3 +179,20 @@ p.todo { padding: 8px 12px; margin: 0; }
   .name::after { animation: none; }
 }
 span.todo { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* odd section out in the internship grid spans the full row */
+.job-grid > section:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* essays read inside a scrolling window */
+.essay-body {
+  max-height: min(70vh, 40rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-left: 6px solid var(--signal);
+  padding: clamp(20px, 3vw, 36px);
+  max-width: calc(var(--measure) + 80px);
+}
+.essay-body p:last-child { margin-bottom: 0; }
+.essay { padding-block: 40px; }

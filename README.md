@@ -11,15 +11,6 @@ Static site for CprE/CybE/EE 494. Plain HTML and CSS, no build step.
 
 To change something later, edit the `.html` file on GitHub (pencil icon) and commit. The site updates on its own.
 
-## Still to fill in
-
-Every placeholder shows up on the site as a yellow dashed box. Search the files for `class="todo"` to find them, replace the text, and remove the `<span class="todo">` wrapper.
-
-- [ ] Senior design: team number and team website link
-- [ ] Card games app: which team you were on (frontend or backend) and any specific tools or docs
-- [ ] Pipelined processor: confirm "My role" matches what you did
-- [ ] Internship: supervisor evaluation
-- [ ] Security+: exam code and verification link
-- [ ] Presentations: links to slides or recordings
+## Updating
 
 To update the resume later, replace `resume.pdf` with a new file of the same name.
